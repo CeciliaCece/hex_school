@@ -136,12 +136,14 @@ html {
 body {
     font-family: "Microsoft JhengHei", "微軟正黑體" !important;
 
+    /*我只是想摳一個一打開看就非常像作業提供的圖稿的網站,礙於圖片像素較小,
+    故設定最大寬度為1000px*/
     background-color: #fff;
     margin: 0 auto;
 }
 
 .wrap {
-    max-width: 1000px;
+    max-width: 1000rem;
     margin: 0 auto;
 }
 
@@ -198,53 +200,39 @@ body {
     overflow: hidden;
 }
 
-.header>ul {
+.header ul {
     display: flex;
     justify-content: flex-end;
 }
 
+.header li {
+    margin: 0 25rem;
+}
+
 .header li a {
+    display: block;
+    padding: 15rem 8rem;
     font-size: 14rem;
     font-weight: bold;
     color: #00cc99;
-    padding: 15rem 20rem;
     text-decoration: none;
     border-top: 3rem solid transparent;
     border-bottom: 3rem solid transparent;
-    margin: 0 15rem;
 }
 
 .header li a:hover {
     border-bottom: 3rem solid #00cc99;
 }
 
-.header>ul>li{
-    position: relative;
-    display: flex;
-    align-items:center;
-    flex-direction:column;
-}
-
-.dropdown{
-    background-color: #fff;
-    opacity: .7;
-    flex-direction:column;
-    z-index: 99;
-    position: absolute;
-    white-space:nowrap;
-    top: 50rem;
-    display: none;
-}
-
-.dropdown a{
-    display: flex;
-    justify-content:center;
-}
-
 /*banner----------------------------------------------------------*/
 
 .banner {
     position: relative;
+}
+
+.banner img {
+    width: 100%;
+    z-index: 9;
 }
 
 .banner h2 {
@@ -261,15 +249,8 @@ body {
     z-index: 11;
     display: flex;
     align-items: center;
-    padding-left: 50rem;
+    padding-left: 24rem;
 }
-
-.swiper {
-    width: 100%;
-    z-index: 8;
-    --swiper-theme-color: #fff;
-    --swiper-navigation-size: 30rem;
-  }
 
 /*content_introduce-----------------------------------------------*/
 
@@ -472,19 +453,6 @@ td {
 .footer a:hover {
     text-decoration: underline;
 }
-/*----------------------------------------------------------------*/
-.top{  
-    position: fixed;
-    bottom: 20rem;
-    right: 20rem;
-    font-size:30rem;
-}
-.top a{
-    color:#00cc99;
-}
-.top :hover{
-    color:#00412e;
-}
 
 /*RWD-------------------------------------------------------------*/
 /*各種裝置大小參考於https://onepc.cc/iphone-ipad-resolution*/
@@ -504,10 +472,11 @@ td {
         width: 90%;
         justify-content: space-around;
     }
+
     .banner h2 {
         max-width: 100%;
-        font-size: 24rem;
-        padding-left: 40rem;
+        font-size: 4vmin;
+        padding-left: 3vmin;
     }
 }
 
