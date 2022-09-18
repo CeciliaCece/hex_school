@@ -1,0 +1,609 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*----------------------------------------------------------------*/
+html {
+    font-size: calc((16px + (18 - 16) * ((100vw - 300px) / (1440 - 320)))/100*6.25);
+}
+
+body {
+    font-family: "Microsoft JhengHei", "微軟正黑體" !important;
+
+    /*我只是想摳一個一打開看就非常像作業提供的圖稿的網站,礙於圖片像素較小,
+    故設定最大寬度為1000px*/
+    background-color: #fff;
+    margin: 0 auto;
+}
+
+.wrap {
+    max-width: 1000rem;
+    margin: 0 auto;
+}
+
+/*topbar----------------------------------------------------------*/
+
+.topbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color: #f6f6f6;
+    padding: 7rem;
+}
+
+.topbar img {
+    margin: 0 2rem 0 5rem;
+}
+
+.topbar a {
+    display: flex;
+    padding-right: 5rem;
+    font-size: 14rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.topbar a:hover {
+    text-decoration: underline;
+}
+
+.fb {
+    color: #4460a0;
+    border-right: 2rem solid #ccc;
+}
+
+.twitter {
+    color: #00aaec;
+}
+
+/*header----------------------------------------------------------*/
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 a {
+    background-image: url(https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/logo.png);
+    background-repeat: no-repeat;
+    width: 224rem;
+    height: 50rem;
+    display: block;
+    text-indent: 101%;
+    overflow: hidden;
+}
+
+.header ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header li {
+    margin: 0 25rem;
+}
+
+.header li a {
+    display: block;
+    padding: 15rem 8rem;
+    font-size: 14rem;
+    font-weight: bold;
+    color: #00cc99;
+    text-decoration: none;
+    border-top: 3rem solid transparent;
+    border-bottom: 3rem solid transparent;
+}
+
+.header li a:hover {
+    border-bottom: 3rem solid #00cc99;
+}
+
+/*banner----------------------------------------------------------*/
+
+.banner {
+    position: relative;
+}
+
+.banner img {
+    width: 100%;
+    z-index: 9;
+}
+
+.banner h2 {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 46%;
+    font-size: 36rem;
+    color: #fff;
+    line-height: 1.3;
+    position: absolute;
+    top: 50%;
+    left: 0rem;
+    right: 0rem;
+    transform: translate(0, -50%);
+    z-index: 11;
+    display: flex;
+    align-items: center;
+    padding-left: 24rem;
+}
+
+/*content_introduce-----------------------------------------------*/
+
+.course {
+    margin: 50rem 0 40rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.course_list {
+    width: 30%;
+    min-width: 240rem;
+    border-radius: 0 0 2% 2%;
+    box-shadow: 0rem 2rem 1rem rgb(196, 196, 196);
+    margin-bottom: 20rem;
+}
+
+.course_list img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.content_introduce h4 {
+    text-align: center;
+    font-size: 18rem;
+    font-weight: 1000;
+}
+
+.content_introduce p {
+    font-size: 14rem;
+    color: #333;
+    font-weight: 600;
+    letter-spacing: 1rem;
+    text-align: justify;
+    line-height: 1.5;
+    padding: 10rem 20rem 15rem 20rem;
+}
+
+.jq_list {
+    display: flex;
+    flex-direction: column;
+    font-size: 14rem;
+    color: #333;
+    line-height: 1.5;
+    font-weight: 600;
+    padding: 10rem 20rem 15rem 20rem;
+}
+
+/*content_table---------------------------------------------------*/
+
+.content_table h3 {
+    font-size: 20rem;
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 24rem;
+    line-height: 1.5;
+}
+
+.content_table table {
+    width: 84%;
+    text-align: left;
+    font-size: 14rem;
+    margin: 0 auto;
+    font-weight: 600;
+    color: #333;
+
+}
+
+.content_table th,
+td {
+    padding: 10rem 25rem;
+}
+
+.content_table th {
+    border-top: 2rem solid #dddddd;
+    border-bottom: 2rem solid #dddddd;
+    background-color: #f7f7f7;
+    font-weight: 1000;
+    font-size: 14rem;
+    color: #000;
+}
+
+.content_table td {
+    border-bottom: 2rem solid #dddddd;
+}
+
+.content_table span {
+    color: #00cc99
+}
+
+/*contect_contect-------------------------------------------------*/
+
+.content_contect {
+    margin-top: 60rem;
+    background: linear-gradient(#00654b, #009872);
+}
+
+.content_contect h3 {
+    font-size: 20rem;
+    text-align: center;
+    line-height: 1.5;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 24rem;
+    padding-top: 30rem;
+}
+
+.content_contect form {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 40rem;
+}
+
+.text_doc {
+    width: 45.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.content_contect textarea {
+    height: inherit;
+    width: 45.5%;
+    resize: none;
+    border: none;
+    border-radius: 4rem;
+    display: flex;
+    align-self: stretch;
+}
+
+.content_contect label {
+    display: block;
+    width: 100%;
+    font-size: 14rem;
+    color: #fff;
+    font-weight: bolder;
+}
+
+.btn {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.content_contect input[type=text],
+.content_contect input[type=tel],
+.content_contect input[type=email] {
+    padding: 10rem;
+    font-size: 12rem;
+    font-weight: bold;
+    width: 95%;
+    border: none;
+    border-radius: 4rem;
+    margin: 5rem 0 15rem 0;
+}
+
+.content_contect input[type=submit] {
+    margin-top: 10rem;
+    font-size: 14rem;
+    font-weight: bold;
+    height: 32rem;
+    width: 70rem;
+    color: #fff;
+    background-color: #00cc99;
+    border: none;
+    border-radius: 4rem;
+}
+
+.content_contect input[type=submit]:hover {
+    color: #00412e;
+    cursor: pointer;
+    box-shadow: 2rem 3rem 1rem rgb(3, 104, 44);
+}
+
+/*footer----------------------------------------------------------*/
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25rem 20rem 55rem 15rem;
+}
+
+.footer li {
+    font-size: 14rem;
+    color: #333;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.footer a {
+    color: #e12d80;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/*RWD-------------------------------------------------------------*/
+/*各種裝置大小參考於https://onepc.cc/iphone-ipad-resolution*/
+
+/*針對ipad用戶768px*/
+@media only screen and (max-width:769px) {
+    .header {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .header h1 {
+        align-self: flex-start;
+    }
+
+    .header ul {
+        width: 90%;
+        justify-content: space-around;
+    }
+
+    .banner h2 {
+        max-width: 100%;
+        font-size: 4vmin;
+        padding-left: 3vmin;
+    }
+}
+
+/*針對768px以下手機用戶*/
+@media only screen and (max-width:768px) {
+    .course_list {
+        width: 80%;
+        justify-content: center;
+    }
+
+    .jq_list {
+        align-items: center;
+    }
+}
+
+/*針對640px以下橫著看手機用戶*/
+@media only screen and (max-width: 767px) {
+    .content_table table {
+        width: 84%;
+    }
+
+    .content_table td:before {
+        content: attr(data-title);
+        display: inline-block;
+        width: 50%;
+        min-width: 20%;
+        padding-right: 1rem;
+    }
+
+    .content_table table,
+    .content_table thead,
+    .content_table tbody,
+    .content_table th,
+    .content_table td,
+    .content_table tr {
+        display: block;
+    }
+
+    .content_table thead tr {
+        display: none;
+    }
+
+    .content_table tr {
+        padding-bottom: 20rem;
+        border-top: 2rem solid #dddddd;
+    }
+
+    .content_table td {
+        position: relative;
+        text-align: right;
+        padding-right: 10rem;
+    }
+
+    .content_table td:before {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        white-space: nowrap;
+    }
+
+    .rdw_font {
+        font-weight: 1000;
+    }
+
+    .content_table td:nth-of-type(1):before,
+    .content_table td:nth-of-type(2):before,
+    .content_table td:nth-of-type(3):before,
+    .content_table td:nth-of-type(4):before {
+        background-color: #f7f7f7;
+        padding: 10rem;
+        font-weight: 1000;
+        color: #000;
+        text-align: left;
+    }
+
+    .content_table td:nth-of-type(1):before {
+        content: "項目";
+    }
+
+    .content_table td:nth-of-type(2):before {
+        content: "Hex School 線上課程";
+    }
+
+    .content_table td:nth-of-type(3):before {
+        content: "一般線上課程";
+    }
+
+    .content_table td:nth-of-type(4):before {
+        content: "實體課程";
+    }
+}
+
+/*針對橫著看的手機568px用戶*/
+@media only screen and (max-width:640px) {
+    .content_contect textarea {
+        display: none;
+    }
+
+    .text_doc {
+        width: 70%;
+    }
+
+    .content_contect input[type=submit] {
+        width: 55%;
+    }
+
+    .btn {
+        justify-content: center;
+    }
+}
+
+/*針對橫著看小手機480px用戶*/
+@media only screen and (max-width:568px) {
+    .footer {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-bottom: 25rem;
+    }
+    .footer ul {
+        padding-top: 20rem;
+    }
+}
+/*針對直著看的所有手機用戶*/
+@media only screen and (max-width:480px) {
+    .header ul {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+}
