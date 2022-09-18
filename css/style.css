@@ -239,7 +239,7 @@ body {
 .dropdown a{
     display: flex;
     justify-content:center;
-}
+}*
 
 /*banner----------------------------------------------------------*/
 
@@ -265,10 +265,14 @@ body {
 }
 
 .swiper {
-    width: 100%;
     z-index: 8;
     --swiper-theme-color: #fff;
     --swiper-navigation-size: 30rem;
+  }
+
+  .swiper-slide img{
+    width: 100%;
+    height: auto;
   }
 
 /*content_introduce-----------------------------------------------*/
@@ -504,6 +508,7 @@ td {
         width: 90%;
         justify-content: space-around;
     }
+    
     .banner h2 {
         max-width: 100%;
         font-size: 24rem;
@@ -633,8 +638,32 @@ td {
 /*針對直著看的所有手機用戶*/
 @media only screen and (max-width:480px) {
     .header ul {
-        width: 100%;
         flex-direction: column;
         align-items: center;
+        width: 100%;
     }
+
+    .header ul li{
+        position: static;  
+        width: 100%;     
+    }
+    
+    .dropdown{
+        background-color: #00cc99;
+        position: static;   
+     }
+
+     .dropdown li {
+        display: flex;
+        justify-content: center;
+     }
+     
+     .dropdown li a{
+        color:#fff;
+     }
+
+     .dropdown li a:hover{
+        border-bottom: 3rem solid #fff;
+     }
+
 }
