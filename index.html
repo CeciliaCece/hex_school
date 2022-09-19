@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="TW">
 
 <head>
     <meta charset="UTF-8">
@@ -19,7 +19,9 @@
     <meta property="og:url" content="https://c48579620.github.io/hexhw_one/" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://www.hexschool.com/favicon.ico" />
-
+    <script src="https://kit.fontawesome.com/74f66b06a0.js" crossorigin="anonymous"></script>
+    <link href="css/lightbox.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -43,39 +45,73 @@
             </h1>
             <ul>
                 <li>
-                    <a href="index.html" title="首頁">首頁</a>
+                    <a href="#" title="首頁">首頁</a>
+                    <ul class="dropdown">
+                        <li><a href="#" title="選單1-1">選單1-1</a></li>
+                        <li><a href="#">選單1-2</a></li>
+                        <li><a href="#">選單1-3</a></li>
+                    </ul>
                 </li>
                 <li>
-                    <a href="#product description" title="產品介紹">產品介紹</a>
+                    <a href="#" title="產品介紹">產品介紹</a>
+                    <ul class="dropdown">
+                        <li><a href="#">選單2-1</a></li>
+                        <li><a href="#">選單2-2</a></li>
+                        <li><a href="#">選單2-3</a></li>
+                    </ul>
                 </li>
                 <li>
-                    <a href="#contact us" title="聯絡我們">聯絡我們</a>
+                    <a href="#" title="聯絡我們">聯絡我們</a>
+                    <ul class="dropdown">
+                        <li><a href="#">選單3-1</a></li>
+                        <li><a href="#">選單3-2</a></li>
+                        <li><a href="#">選單3-3</a></li>
+                    </ul>
                 </li>
             </ul>
         </div>
 
         <div class="banner">
-            <img src="https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/banner.png" alt="背景圖">
-            <h2 class="banner_h2">六角學院<br>讓您奠定良好的前端基礎</h2>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/banner.png" alt="背景圖"><h2 class="banner_h2">六角學院<br>讓您奠定良好的前端基礎</h2></div>
+                  <div class="swiper-slide"><img src="https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/banner.png" alt="背景圖"><h2 class="banner_h2">標題二<br>內容內容內容內容內容</h2></div>
+                  <div class="swiper-slide"><img src="https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/banner.png" alt="背景圖"><h2 class="banner_h2">標題三<br>內容內容內容內容內容</h2></div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                
+              </div>
+            
         </div>
 
-        <div class="content_introduce" id="product description">
+        <div class="content_introduce">
             <ul class="course">
                 <li class="course_list">
-                    <img src="https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/html.png"
-                        alt="HTML5概念圖片">
+                    <a class="course_list_image"
+                        href="https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/html.png"
+                        data-lightbox="course_list_image-1" data-title="HTML5"><img class="course_list_image"
+                            src="https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/html.png"
+                            alt="HTML5概念圖片" /></a>
                     <h4>Html5基礎教學</h4>
                     <p>主流前端網站設計的基礎就在六角學院，在這裡不是填鴨式教學，而是透過實際的範例，瞭解正確的網站開發流程，講師均具有業界開發經驗，讓學員學習業界主流的開發方法。</p>
                 </li>
                 <li class="course_list">
-                    <img src="https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/rwd.png"
-                        alt="響應式網站概念圖片">
+                    <a class="course_list_image"
+                        href="https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/rwd.png"
+                        data-lightbox="course_list_image-2" data-title="響應式網站"><img class="course_list_image"
+                            src="https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/rwd.png"
+                            alt="響應式網站概念圖片" /></a>
                     <h4>響應式網站設計</h4>
                     <p>響應式網站設計(Responsive web design)，目前大多使用者均是以手機瀏覽的情況下，響應式網站已經是必備的。六角學院將會提供業界響應式開發方法，讓學生瞭解行動版開發技巧。</p>
                 </li>
                 <li class="course_list">
-                    <img src="https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/jQuery.png"
-                        alt="jQuery概念圖片">
+                    <a class="course_list_image"
+                        href="https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/jQuery.png"
+                        data-lightbox="course_list_image-3" data-title="jQuery"><img class="course_list_image"
+                            src="https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/jQuery.png"
+                            alt="jQuery概念圖片" /></a>
                     <h4>jQuery 實戰教學</h4>
                     <div class="jq_list">
                         <ul>
@@ -145,7 +181,7 @@
             </table>
         </div>
 
-        <div class="content_contect" id="contact us">
+        <div class="content_contect">
 
             <h3>對我們課程有興趣嗎？<br>歡迎留下您的資料</h3>
             <form action="index.html">
@@ -174,6 +210,11 @@
                 <li>電話：<a href="tel:+886999123456">0999123456</a></li>
             </ul>
         </div>
+        <div class="top"><a href="#"><i class="fa-regular fa-circle-up"></i></a></div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="js/lightbox.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <script src="js/all.js"></script>
 </body>
 
 </html>
